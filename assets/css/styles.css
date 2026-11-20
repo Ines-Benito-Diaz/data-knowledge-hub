@@ -263,7 +263,7 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
 .gateway-intro h1 { margin: 0; color: #3b0f1a; font: 600 clamp(54px, 7.3vw, 96px)/.99 'Instrument Sans', sans-serif; letter-spacing: -.035em; }
 .gateway-intro h1 span { display: block; }
 .gateway-intro h1 i { color: #55708e; font-style: normal; }
-.gateway-intro p { max-width: 34ch; margin: 25px 0 0 4px; color: #55708e; font: 400 clamp(16px, 1.35vw, 19px)/1.55 'Instrument Sans', sans-serif; }
+.gateway-intro p { max-width: 34ch; margin: 25px 0 0 4px; color: #55708e; font: 400 clamp(16px, 1.35vw, 19px)/1.35 'Instrument Sans', sans-serif; }
 .gateway-paths { display: grid; min-width: 0; min-height: 100%; grid-template-rows: 1.08fr .92fr; }
 .gateway-path { display: grid; min-height: 0; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 18px; padding: clamp(26px, 4vw, 58px); color: #f2ede6; text-decoration: none; transition: filter .2s ease; }
 .gateway-tools { background: #66172e; }
@@ -272,8 +272,10 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
 .gateway-path-copy { min-width: 0; }
 .gateway-path-title { display: block; font: 500 clamp(30px, 4.5vw, 60px)/1 'Instrument Sans', sans-serif; letter-spacing: -.035em; transition: transform .28s cubic-bezier(.2,.8,.2,1); }
 .gateway-path:hover .gateway-path-title { transform: translateX(4px); }
-.gateway-path-description { max-width: 35ch; margin: 16px 0 0; color: #f2ede6; font: 400 clamp(14px, 1.2vw, 16px)/1.5 'Instrument Sans', sans-serif; }
-.gateway-path-tools { margin: 16px 0 0; color: #f2ede6; font: 500 12px/1.6 'Instrument Sans', sans-serif; letter-spacing: .01em; }
+.gateway-path-description { max-width: 35ch; margin: 14px 0 0; color: #f2ede6; font: 400 clamp(14px, 1.2vw, 16px)/1.35 'Instrument Sans', sans-serif; }
+.gateway-path-tools { display: flex; flex-wrap: wrap; gap: 7px; margin: 14px 0 0; padding: 0; list-style: none; }
+.gateway-path-tools li { padding: 4px 8px; border: 1px solid #a77984; border-radius: 4px; background: #3b0f1a45; color: #f2ede6; font: 500 11px/1.35 'Instrument Sans', sans-serif; }
+.gateway-projects .gateway-path-tools li { border-color: #91a5bd; background: #3b0f1a33; }
 .gateway-path svg { width: 27px; height: 27px; flex: none; margin-bottom: 5px; fill: none; stroke: #b7c7d9; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5; transition: transform .28s cubic-bezier(.2,.8,.2,1); }
 .gateway-path:hover svg { transform: translate(3px, -3px); }
 .gateway-path:focus-visible { z-index: 1; outline: 3px solid #b7c7d9; outline-offset: -7px; }
@@ -283,17 +285,18 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
   .gateway-intro h1 { font-size: clamp(50px, 7vw, 60px); }
 }
 @media (max-width: 700px) {
-  .gateway-layout { grid-template-columns: 1fr; grid-template-rows: minmax(390px, 1.12fr) minmax(220px, .82fr) minmax(200px, .72fr); }
+  .gateway-layout { grid-template-columns: 1fr; grid-template-rows: minmax(390px, 1.12fr) minmax(220px, .82fr) minmax(250px, .9fr); }
   .gateway-intro { padding: 36px 28px 40px; }
   .gateway-intro h1 { font-size: clamp(51px, 12vw, 76px); }
-  .gateway-intro p { max-width: 33ch; margin-top: 19px; font-size: 16px; }
+  .gateway-intro p { max-width: 33ch; margin-top: 19px; font-size: 16px; line-height: 1.35; }
   .gateway-path { padding: 25px 28px; }
   .gateway-path-title { font-size: 38px; }
-  .gateway-path-description { max-width: 39ch; margin-top: 12px; font-size: 14px; }
-  .gateway-path-tools { margin-top: 11px; font-size: 11px; }
+  .gateway-path-description { max-width: 39ch; margin-top: 12px; font-size: 14px; line-height: 1.35; }
+  .gateway-path-tools { gap: 6px; margin-top: 11px; }
+  .gateway-path-tools li { padding: 4px 7px; font-size: 10px; }
 }
 @media (max-width: 390px) {
-  .gateway-layout { grid-template-rows: minmax(360px, 1.12fr) minmax(210px, .82fr) minmax(190px, .72fr); }
+  .gateway-layout { grid-template-rows: minmax(360px, 1.12fr) minmax(210px, .82fr) minmax(240px, .9fr); }
   .gateway-intro { padding-right: 22px; padding-left: 22px; }
   .gateway-intro h1 { font-size: clamp(48px, 12vw, 56px); }
   .gateway-path { padding-right: 22px; padding-left: 22px; }
