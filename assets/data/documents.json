@@ -1,4 +1,5 @@
 [
   {"id":"vscode","title":"VS Code essentials","path":"vscode-essentials.html","category":"tools","tool":"VS Code","tags":["editor","productivity","shortcuts"],"difficulty":"Beginner","updated":"2026-11-20","summary":"Configure a focused editor and keep common navigation close at hand.","icon":"⌘","quickAccess":false,"related":["git-basics"]},
+  {"id":"uv-python","title":"UV essentials","path":"uv-essentials.html","category":"tools","tool":"UV","tags":["python","packages","environment"],"difficulty":"Beginner","updated":"2026-11-23","summary":"Set up Python projects, manage dependencies, and run code with UV.","icon":"uv","quickAccess":false,"related":[]},
   {"id":"git-basics","title":"Git & GitHub essentials","path":"git-github.html","category":"tools","tool":"Git & GitHub","tags":["version control","commands","workflow"],"difficulty":"Beginner","updated":"2026-11-20","summary":"A practical starting point for repository setup, staging, commits and everyday collaboration.","icon":"⌘","quickAccess":true,"related":[]}
 ]
