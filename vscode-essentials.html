@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/guide-content.js" defer></script>
 </head>
-<body class="guide-page" data-guide-source="docs/tools/vscode-shortcuts.md">
+<body class="guide-page">
   <main>
     <header class="guide-hero">
       <a class="guide-back" href="tools.html">← Tools &amp; platforms</a>
@@ -17,15 +17,46 @@
       <p>A practical reference for coding faster, navigating VS Code, and keeping your hands off the mouse.</p>
     </header>
     <div class="guide-content">
-      <section class="guide-section" id="shortcuts" aria-labelledby="shortcuts-heading">
-        <div class="guide-section-heading">
-          <h2 id="shortcuts-heading">Keyboard shortcuts</h2>
-          <p>Browse common editor, navigation, search, terminal, and debugging shortcuts for macOS and Windows.</p>
-        </div>
-        <article class="guide-markdown" id="guide-content" aria-live="polite">
-          <p class="guide-loading">Loading the VS Code shortcuts…</p>
-        </article>
-      </section>
+      <div class="guide-main">
+        <nav class="guide-tabs" aria-label="VS Code guide sections" role="tablist">
+          <button class="guide-tab guide-tab-active" id="setup-tab" type="button" role="tab" aria-selected="true" aria-controls="setup-panel" tabindex="0">Getting started</button>
+          <button class="guide-tab" id="shortcuts-tab" type="button" role="tab" aria-selected="false" aria-controls="shortcuts-panel" tabindex="-1">Keyboard shortcuts</button>
+        </nav>
+        <section class="guide-section" id="setup-panel" role="tabpanel" aria-labelledby="setup-tab" tabindex="0">
+          <div class="guide-panel-layout">
+            <aside class="guide-index" aria-label="Getting started index">
+              <h2>In this section</h2>
+              <nav data-guide-index aria-label="Getting started topics"><p class="guide-index-loading">Building the index…</p></nav>
+            </aside>
+            <div class="guide-panel-content">
+              <div class="guide-section-heading">
+                <h2 id="setup-heading">Getting started with VS Code</h2>
+                <p>Set up your workspace, learn the editor, and find the extensions and tools you need.</p>
+              </div>
+              <article class="guide-markdown" id="setup-content" data-guide-source="docs/tools/vscode-setup.md" aria-live="polite">
+                <p class="guide-loading">Loading the VS Code setup guide…</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="guide-section" id="shortcuts-panel" role="tabpanel" aria-labelledby="shortcuts-tab" tabindex="0" hidden>
+          <div class="guide-panel-layout">
+            <aside class="guide-index" aria-label="Keyboard shortcuts index">
+              <h2>In this section</h2>
+              <nav data-guide-index aria-label="Shortcut topics"><p class="guide-index-loading">Building the index…</p></nav>
+            </aside>
+            <div class="guide-panel-content">
+              <div class="guide-section-heading">
+                <h2 id="shortcuts-heading">Keyboard shortcuts</h2>
+                <p>Browse common editor, navigation, search, terminal, and debugging shortcuts for macOS and Windows.</p>
+              </div>
+              <article class="guide-markdown" id="guide-content" data-guide-source="docs/tools/vscode-shortcuts.md" aria-live="polite">
+                <p class="guide-loading">Loading the VS Code shortcuts…</p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
       <footer class="collection-footer guide-footer">
         <a href="tools.html">← Back to tools</a>
         <a href="index.html">Data Knowledge Hub</a>

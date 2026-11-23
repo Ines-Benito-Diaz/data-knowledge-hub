@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f2ede6">
-  <meta name="description" content="A practical Git reference for configuration, everyday commands, branches, history and collaboration.">
+  <meta name="description" content="Practical guides to Git and GitHub, from everyday commands and branches to pull requests and collaboration.">
   <title>Git &amp; GitHub essentials · Data Knowledge Hub</title>
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/guide-content.js" defer></script>
 </head>
-<body class="guide-page" data-guide-source="docs/tools/git-essentials.md">
+<body class="guide-page">
   <main>
     <header class="guide-hero">
       <a class="guide-back" href="tools.html">← Tools &amp; platforms</a>
@@ -17,29 +17,47 @@
       <p>A practical starting point for repository setup, staging, commits and everyday collaboration.</p>
     </header>
     <div class="guide-content">
-      <nav class="guide-tabs" aria-label="Guide sections">
-        <a class="guide-tab guide-tab-active" href="#git">Git</a>
-        <a class="guide-tab" href="#github">GitHub <span>Coming soon</span></a>
-      </nav>
-      <section class="guide-section" id="git" aria-labelledby="git-heading">
-        <div class="guide-section-heading">
-          <span>01 / LOCAL VERSION CONTROL</span>
-          <h2 id="git-heading">Git</h2>
-          <p>Commands and workflows from setup through history, branches, and safely undoing work.</p>
-          <p class="guide-course"><strong>Recommended course:</strong> GitByGit — VS Code Extension</p>
-        </div>
-        <article class="guide-markdown" id="guide-content" aria-live="polite">
-          <p class="guide-loading">Loading the Git reference…</p>
-        </article>
-      </section>
-      <section class="guide-section guide-github-section" id="github" aria-labelledby="github-heading">
-        <div class="guide-section-heading">
-          <span>02 / HOSTED COLLABORATION</span>
-          <h2 id="github-heading">GitHub</h2>
-          <p>This part of the guide is in progress.</p>
-        </div>
-        <div class="github-pending"><span aria-hidden="true">↗</span><p>GitHub setup, remotes, and collaboration notes will be added here.</p></div>
-      </section>
+      <div class="guide-main">
+        <nav class="guide-tabs" aria-label="Git and GitHub sections" role="tablist">
+          <button class="guide-tab guide-tab-active" id="git-tab" type="button" role="tab" aria-selected="true" aria-controls="git-panel" tabindex="0">Git</button>
+          <button class="guide-tab" id="github-tab" type="button" role="tab" aria-selected="false" aria-controls="github-panel" tabindex="-1">GitHub</button>
+        </nav>
+        <section class="guide-section" id="git-panel" role="tabpanel" aria-labelledby="git-tab" tabindex="0">
+          <div class="guide-panel-layout">
+            <aside class="guide-index" aria-label="Git guide index">
+              <h2>In this section</h2>
+              <nav data-guide-index aria-label="Git topics"><p class="guide-index-loading">Building the index…</p></nav>
+            </aside>
+            <div class="guide-panel-content">
+              <div class="guide-section-heading">
+                <h2 id="git-heading">Git</h2>
+                <p>Commands and workflows from setup through history, branches, and safely undoing work.</p>
+                <p class="guide-course"><strong>Recommended course:</strong> GitByGit — VS Code Extension</p>
+              </div>
+              <article class="guide-markdown" id="guide-content" data-guide-source="docs/tools/git-essentials.md" aria-live="polite">
+                <p class="guide-loading">Loading the Git reference…</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="guide-section guide-github-section" id="github-panel" role="tabpanel" aria-labelledby="github-tab" tabindex="0" hidden>
+          <div class="guide-panel-layout">
+            <aside class="guide-index" aria-label="GitHub guide index">
+              <h2>In this section</h2>
+              <nav data-guide-index aria-label="GitHub topics"><p class="guide-index-loading">Building the index…</p></nav>
+            </aside>
+            <div class="guide-panel-content">
+              <div class="guide-section-heading">
+                <h2 id="github-heading">GitHub</h2>
+                <p>Navigate repositories, organize work with branches, and collaborate through pull requests and reviews.</p>
+              </div>
+              <article class="guide-markdown" id="github-guide-content" data-guide-source="docs/tools/github.md" aria-live="polite">
+                <p class="guide-loading">Loading the GitHub guide…</p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
       <footer class="collection-footer guide-footer">
         <a href="tools.html">← Back to tools</a>
         <a href="index.html">Data Knowledge Hub</a>

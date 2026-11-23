@@ -17,10 +17,9 @@ function render() {
   const shown = selectedFilters.size ? items.filter(item => filterValues(item).some(value => selectedFilters.has(value))) : items;
   grid.innerHTML = shown.length ? shown.map(item => `<a class="library-card ${category}-library-card" href="${safeText(item.path)}">
     <div class="library-card-top"><span class="library-card-icon">${safeText(item.icon)}</span></div>
-    <div class="library-card-type">${safeText(category === 'tools' ? item.tool : 'PROJECT GUIDE')}</div>
     <h3>${safeText(item.title)}</h3><p>${safeText(item.summary)}</p>
     <div class="library-card-bottom"><span class="library-card-action">Open guide <b>↗</b></span></div>
-  </a>`).join('') : '<div class="collection-empty">No guides match this filter yet.</div>';
+  </a>`).join('') : `<div class="collection-empty">${items.length ? 'No guides match this filter yet.' : 'No guides in this collection yet.'}</div>`;
 }
 
 function updateFilterState() {
@@ -45,6 +44,11 @@ async function init() {
   if (!response.ok) throw new Error(`Catalog request failed: ${response.status}`);
   const catalog = await response.json();
   items = catalog.filter(item => item.category === category);
+  if (!items.length) {
+    filters.hidden = true;
+    render();
+    return;
+  }
   const values = ['All', ...new Set(items.flatMap(filterValues))];
   filterTitle = 'Tool';
   filters.innerHTML = `<button class="filter-chip selected" type="button" data-reset-filters aria-pressed="true">All</button>
