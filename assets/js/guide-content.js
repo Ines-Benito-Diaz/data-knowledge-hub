@@ -246,6 +246,7 @@ const tablist = document.querySelector('[role="tablist"]');
 if (tablist) {
   const tabs = [...tablist.querySelectorAll('[role="tab"]')];
   const activateTab = (tab, moveFocus = false) => {
+    const wasSelected = tab.getAttribute('aria-selected') === 'true';
     tabs.forEach(candidate => {
       const active = candidate === tab;
       candidate.setAttribute('aria-selected', String(active));
@@ -254,6 +255,14 @@ if (tablist) {
       document.getElementById(candidate.getAttribute('aria-controls')).hidden = !active;
     });
     if (moveFocus) tab.focus();
+    if (!wasSelected) {
+      const panel = document.getElementById(tab.getAttribute('aria-controls'));
+      const heading = panel?.querySelector('.guide-section-heading h2');
+      heading?.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+        block: 'start'
+      });
+    }
   };
 
   tabs.forEach((tab, index) => {
