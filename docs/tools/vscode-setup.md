@@ -1,21 +1,6 @@
 # VS Code – Getting Started Guide
 
-A practical introduction to Visual Studio Code for people who are new to the editor.
-
-## 1. What is VS Code?
-
-Visual Studio Code (VS Code) is a free code editor that allows you to write, edit, run and manage code.
-
-It supports multiple programming languages and technologies, including Python, JavaScript, SQL, HTML and more.
-
-Unlike a basic text editor, VS Code offers additional functionality through:
-
-- **Extensions:** Add support for programming languages, formatting, debugging and other tools.
-- **Integrated Terminal:** Run commands without leaving the editor.
-- **Source Control:** Manage Git repositories and track code changes.
-- **Workspace Settings:** Customize the editor for individual projects.
-
-## 2. Understanding the VS Code interface
+## 1. Understanding the VS Code interface
 
 The main interface is divided into several areas:
 
@@ -25,38 +10,8 @@ The main interface is divided into several areas:
 - **Panel:** Usually located at the bottom. Contains the Terminal, Problems, Output and Debug Console.
 - **Status Bar:** The bottom bar showing information about the current file, language, Git branch and other settings.
 
-## 3. Understanding projects and workspaces
 
-A **workspace** is the environment in which you work. In most cases, it simply means the project folder you have opened in VS Code.
-
-For example, imagine you have this project:
-
-```text
-my-project/
-│
-├── src/
-│   ├── main.py
-│   └── utils.py
-│
-├── data/
-│   └── dataset.csv
-│
-├── requirements.txt
-└── README.md
-```
-
-When you open `my-project` in VS Code, the entire folder becomes your workspace.
-
-**Important concepts:**
-
-- **Folder:** A directory containing your project files.
-- **Workspace:** The folder or collection of folders currently open in VS Code.
-- **Multi-root workspace:** A workspace containing multiple independent project folders.
-- **Workspace settings:** Settings that apply only to a particular project.
-
-For most beginners, opening one project folder at a time is the best approach.
-
-## 4. How to open an existing project
+## 2. How to open an existing project
 
 There are several ways to open a project.
 
@@ -87,7 +42,7 @@ The `.` means the current directory.
 
 > **Tip:** Always open the main project folder rather than individual files. This allows VS Code to recognize the project structure and its configuration.
 
-## 5. How to create a new project
+## 3. How to create a new project
 
 1. Create a new folder on your computer.
 2. Give it a descriptive name (e.g. `python-learning`).
@@ -109,7 +64,7 @@ To create a subfolder:
 
 > **Tip:** Keep your projects organized in dedicated folders instead of saving everything directly on your Desktop.
 
-## 6. Basic workspace configuration
+## 4. Basic workspace configuration
 
 You don't need to customize everything before getting started. However, a few settings can make your experience more comfortable.
 
@@ -135,7 +90,7 @@ Recommended settings to explore:
 
 Use User Settings for personal preferences and Workspace Settings when a project requires specific configurations.
 
-## 7. How to install extensions
+## 5. How to install extensions
 
 Extensions are add-ons that provide additional functionality to VS Code.
 
@@ -158,7 +113,7 @@ From the Extensions view, you can:
 
 > **Important:** Check the publisher and documentation before installing an extension. Some extensions require additional software or dependencies to work.
 
-## 8. Recommended extensions
+## 6. Recommended extensions
 
 You don't need to install every available extension. The right selection depends on the programming languages and tools you use.
 
@@ -189,7 +144,7 @@ You don't need to install every available extension. The right selection depends
 
 > **A note about extensions:** Prettier and ESLint serve different purposes. Prettier formats code, while ESLint identifies potential issues and enforces coding rules. They can work together.
 
-## 9. Using the integrated Terminal
+## 7. Using the integrated Terminal
 
 The integrated Terminal allows you to execute commands directly inside VS Code.
 
@@ -219,7 +174,7 @@ The terminal usually opens in your workspace directory.
 
 > **Important:** VS Code is an editor, not a programming language runtime. You may need to install additional software, such as Python or Node.js, to execute your code.
 
-## 10. Working with Git
+## 8. Working with Git
 
 VS Code includes built-in Git integration, allowing you to manage version control without leaving the editor.
 
@@ -235,7 +190,7 @@ From the **Source Control** view, you can:
 
 For more advanced Git commands, see the [Git & GitHub essentials guide](../../git-github.html).
 
-## 11. Recommended first-time setup checklist
+## 9. Recommended first-time setup checklist
 
 - [ ] Install Visual Studio Code.
 - [ ] Open your first project folder.

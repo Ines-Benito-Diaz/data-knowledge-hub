@@ -18,6 +18,16 @@ UV manages Python installations, project dependencies, virtual environments and 
 
 ## 2. Installation
 
+### Check whether UV is already installed
+
+Run this command in your terminal:
+
+```bash
+uv --version
+```
+
+If it displays a version number, UV is already installed and you can skip the installation steps below. If the command is not found, install UV using the instructions for your operating system.
+
 ### Install UV
 
 **macOS / Linux — Terminal**
@@ -34,11 +44,7 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 ### Verify installation
 
-Restart the terminal if necessary, then run:
-
-```bash
-uv --version
-```
+After installing, restart the terminal if necessary and run `uv --version` to confirm that UV is available.
 
 ### Update UV
 

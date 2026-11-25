@@ -187,7 +187,32 @@ function buildGuideIndex(panel) {
   const headings = [...panel.querySelectorAll('.guide-markdown h2, .guide-markdown h3, .guide-markdown h4')];
   const link = targetId => `<a href="#${targetId}" data-guide-target="${targetId}">`;
   index.innerHTML = `<ul class="guide-index-list"><li class="guide-index-group">${link(sectionHeading.id)}${escapeHtml(sectionHeading.textContent)}</a>${headings.length ? `<ul>${headings.map(heading => `<li class="guide-index-item ${heading.tagName.toLowerCase()}">${link(heading.id)}${escapeHtml(heading.textContent)}</a></li>`).join('')}</ul>` : ''}</li></ul>`;
+  observeGuideHeadings(panel, index, sectionHeading, headings);
 }
+
+const guideIndexObservers = new WeakMap();
+
+function observeGuideHeadings(panel, index, sectionHeading, headings) {
+  guideIndexObservers.get(panel)?.disconnect();
+  const indexedHeadings = [sectionHeading, ...headings];
+  if (!('IntersectionObserver' in window) || !indexedHeadings.length) return;
+
+  const observer = new IntersectionObserver(entries => {
+    const active = entries.filter(entry => entry.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+    if (!active) return;
+    index.querySelectorAll('[aria-current="location"]').forEach(link => link.removeAttribute('aria-current'));
+    index.querySelector(`[data-guide-target="${active.target.id}"]`)?.setAttribute('aria-current', 'location');
+  }, { rootMargin: '-12% 0px -72% 0px', threshold: 0 });
+  indexedHeadings.forEach(heading => observer.observe(heading));
+  guideIndexObservers.set(panel, observer);
+}
+
+document.querySelectorAll('.guide-index').forEach(index => {
+  if (window.matchMedia('(hover: hover)').matches) {
+    index.addEventListener('pointerenter', () => index.classList.add('guide-index-hover'));
+    index.addEventListener('pointerleave', () => index.classList.remove('guide-index-hover'));
+  }
+});
 
 document.querySelectorAll('[role="tabpanel"]').forEach(buildGuideIndex);
 document.querySelectorAll('[data-guide-index]').forEach(index => index.addEventListener('click', event => {
